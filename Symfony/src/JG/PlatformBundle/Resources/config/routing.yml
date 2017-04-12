@@ -1,0 +1,38 @@
+jg_platform_home:
+    path:      /{page}
+    defaults: { _controller: JGPlatformBundle:Advert:index, page : 1 }
+    requirements:
+        page: \d*                                                                                                                                                                                                                                                                                                                           
+jg_platform_view:
+    path:      /advert/{id}
+    defaults:
+        _controller: JGPlatformBundle:Advert:view
+    requirements:
+        id: \d+
+jg_platform_add:
+    path:      /add
+    defaults: { _controller: JGPlatformBundle:Advert:add }
+jg_platform_view_slug:
+    path:      /{year}/{slug}.{_format}
+    defaults: { _controller: JGPlatformBundle:Advert:add, format : html }
+    requirements:
+        year:   \d{4}
+        format: html|xml
+jg_platform_add:
+    path:      /add
+    defaults:
+        _controller: JGPlatformBundle:Advert:add
+
+jg_platform_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: JGPlatformBundle:Advert:edit
+    requirements:
+        id: \d+
+
+jg_platform_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: JGPlatformBundle:Advert:delete
+    requirements:
+        id: \d+

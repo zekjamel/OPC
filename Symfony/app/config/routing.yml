@@ -1,0 +1,4 @@
+jg_platform:
+    resource: "@JGPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
+
