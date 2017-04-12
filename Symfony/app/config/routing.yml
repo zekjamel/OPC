@@ -1,3 +1,7 @@
+jg_core:
+    resource: "@JGCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
 jg_platform:
     resource: "@JGPlatformBundle/Resources/config/routing.yml"
     prefix:   /platform
